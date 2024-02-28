@@ -23,7 +23,7 @@ let SpeakAloud = document.getElementById('speakAloud')
 let mainwordlink = document.getElementById('mainwordlink')
 
 let scroolup = document.getElementById('scroolup')
-Queue
+
 /* images for elements */
 let Desperate = './desperate.png'
 let Melancholy = './melancholy.png'
