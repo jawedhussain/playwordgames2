@@ -4,8 +4,8 @@ let mainWord = document.getElementById('mainWord')
 let shower = document.getElementById('shower')
 let testImage = document.getElementById('testImage')
 let imagesId = document.getElementById('imagesId')
-let rightScoreValue = document.getElementById('rightScoreValue')
-let wrongScoreValue = document.getElementById('wrongScoreValue')
+let rightScoreContainer = document.getElementById('rightScoreContainer')
+let wrongScoreContainer = document.getElementById('wrongScoreContainer')
 let wordNumber = document.getElementById('wordNumber')
 let btn = document.getElementById('btn')
 let audio = document.getElementById('audio')
@@ -14,6 +14,10 @@ let mainContainer = document.getElementById('imagetotest')
 let gifSource = './rightanswer.gif'
 let gifContainer = document.createElement('div')
 gifContainer.setAttribute('id', 'fireWork')
+
+
+wordNumber
+
 
 // gifContainer.setAttribute('id', 'fireWork')
 
@@ -650,54 +654,7 @@ let UrgeAudio = './Urge.mp3'
 
 // asli mall yaha hai
 
-let intialRightScore
-let intialWrongScore
 
-
-// for right score
-if (sessionStorage.getItem('rightScore') == 0) {
-    intialRightScore = 0
-    rightScoreValue.textContent = intialRightScore
-}
-else (
-    intialRightScore = sessionStorage.getItem('rightScore')
-)
-
-// for worng score
-
-if (sessionStorage.getItem('wrongScore') == 0) {
-    intialWrongScore = 0
-    wrongScoreValue.textContent = intialWrongScore
-}
-else (
-    intialWrongScore = sessionStorage.getItem('wrongScore')
-)
-
-rightScoreValue.textContent = 0
-wrongScoreValue.textContent = 0
-
-let retrievedRightScore = sessionStorage.getItem('rightScore')
-let retrievedWrongScore = sessionStorage.getItem('wrongScore')
-// adding rightScore to the session storage
-if (retrievedRightScore === null) {
-    var scoreValueRight = 0
-    sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-}
-else {
-    scoreValueRight = JSON.parse(retrievedRightScore)
-    rightScoreValue.textContent = scoreValueRight
-}
-
-// adding wrongScore to the session storage
-
-if (retrievedWrongScore === null) {
-    var scoreValueWrong = 0
-    sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-}
-else {
-    scoreValueWrong = JSON.parse(retrievedWrongScore)
-    wrongScoreValue.textContent = scoreValueWrong
-}
 
 // vocabulary array
 
@@ -807,9 +764,9 @@ let ArrayOfAudios = [
 
 
 
-console.log(ArrayOfImages.length)
-console.log(vocabArray.length)
-console.log(ArrayOfAudios.length)
+// console.log(ArrayOfImages.length)
+// console.log(vocabArray.length)
+// console.log(ArrayOfAudios.length)
 
 
 // error checker
@@ -845,18 +802,101 @@ console.log(ArrayOfAudios.length)
 
 
 
+// for right score
 
-let a2 = 0
-let b2 = ArrayOfImages.length - 1
+
+
+
+rightScoreContainer.textContent = 0
+wrongScoreContainer.textContent = 0
+
+let retrievedRightScore = sessionStorage.getItem('rightScore')
+let retrievedWrongScore = sessionStorage.getItem('wrongScore')
+
+
+// adding rightScore to the session storage
+if (retrievedRightScore === null) {
+    var scoreValueRight = 0
+    sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
+}
+else {
+    scoreValueRight = JSON.parse(retrievedRightScore)
+    rightScoreContainer.textContent = scoreValueRight
+}
+
+// adding wrongScore to the session storage
+
+if (retrievedWrongScore === null) {
+    var scoreValueWrong = 0
+    sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
+}
+else {
+    scoreValueWrong = JSON.parse(retrievedWrongScore)
+    wrongScoreContainer.textContent = scoreValueWrong
+}
+
+
+
+
+
+
+// adding max range here
+
+let maxField=document.getElementById('maxField')
+let submitButton1=document.getElementById('submitButton1')
+
+let maxRetrivedValue=sessionStorage.getItem('maxValueKey')
+
+if(maxRetrivedValue===null){
+    var b2=302
+    sessionStorage.setItem('maxValueKey',b2)
+}
+
+else{
+         b2=maxRetrivedValue
+    
+}
+
+
+
+
+
+submitButton1.addEventListener('click',()=>{
+    
+    b2=maxField.value
+    sessionStorage.setItem('maxValueKey',b2)
+    window.location.reload()
+
+
+
+
+
+})
+
+let a2=0
+
+// ending max range code here
 
 
 let random2 = Math.round(a2 + (b2 - a2) * Math.random())
+console.log(random2)
 
 let random3 = Math.round(a2 + (b2 - a2) * Math.random())
+console.log(random3)
 
 let random4 = Math.round(a2 + (b2 - a2) * Math.random())
+console.log(random4)
 
 let random5 = Math.round(a2 + (b2 - a2) * Math.random())
+console.log(random5)
+
+
+
+
+
+
+
+
 let checker = 0
 
 let Image1
@@ -879,7 +919,7 @@ let mainInterval = setInterval(() => {
 
 
 
-}, 1);
+}, .1);
 
 
 
@@ -957,13 +997,12 @@ setTimeout(() => {
             gifContainer.appendChild(gifElement)
             body.appendChild(gifContainer)
             err.textContent = "right answer"
-            audio.play()
+            // audio.play()
             err.classList.add('rightAnswer')
             shower.appendChild(err)
-            intialRightScore++
-            scoreValueRight = intialRightScore
+            scoreValueRight++
             sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreValue.textContent = scoreValueRight
+            rightScoreContainer.textContent = scoreValueRight
 
             setTimeout(() => {
                 window.location.reload()
@@ -974,10 +1013,10 @@ setTimeout(() => {
             err.textContent = "wrong answer"
             err.classList.add('worngAnswer')
             shower.appendChild(err)
-            intialWrongScore++
-            scoreValueWrong = intialWrongScore
+        
+            scoreValueWrong++
             sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreValue.textContent = scoreValueWrong
+            wrongScoreContainer.textContent = scoreValueWrong
             setTimeout(() => {
                 window.location.reload()
             }, 1000);
@@ -994,13 +1033,13 @@ setTimeout(() => {
             gifContainer.appendChild(gifElement)
             body.appendChild(gifContainer)
             err.textContent = "right answer"
-            audio.play()
+            // audio.play()
             err.classList.add('rightAnswer')
             shower.appendChild(err)
-            intialRightScore++
-            scoreValueRight = intialRightScore
+        
+            scoreValueRight++
             sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreValue.textContent = scoreValueRight
+            rightScoreContainer.textContent = scoreValueRight
             setTimeout(() => {
                 window.location.reload()
             }, 2000);
@@ -1011,10 +1050,10 @@ setTimeout(() => {
             err.textContent = "wrong answer"
             err.classList.add('worngAnswer')
             shower.appendChild(err)
-            intialWrongScore++
-            scoreValueWrong = intialWrongScore
+           
+            scoreValueWrong++
             sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreValue.textContent = scoreValueWrong
+            wrongScoreContainer.textContent = scoreValueWrong
             setTimeout(() => {
                 window.location.reload()
             }, 1000);
@@ -1029,13 +1068,13 @@ setTimeout(() => {
             gifContainer.appendChild(gifElement)
             body.appendChild(gifContainer)
             err.textContent = "right answer"
-            audio.play()
+            // audio.play()
             err.classList.add('rightAnswer')
             shower.appendChild(err)
-            intialRightScore++
-            scoreValueRight = intialRightScore
+        
+            scoreValueRight++
             sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreValue.textContent = scoreValueRight
+            rightScoreContainer.textContent = scoreValueRight
             setTimeout(() => {
                 window.location.reload()
             }, 2000);
@@ -1046,10 +1085,10 @@ setTimeout(() => {
             err.textContent = "wrong answer"
             err.classList.add('worngAnswer')
             shower.appendChild(err)
-            intialWrongScore++
-            scoreValueWrong = intialWrongScore
+    
+            scoreValueWrong++
             sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreValue.textContent = scoreValueWrong
+            wrongScoreContainer.textContent = scoreValueWrong
             setTimeout(() => {
                 window.location.reload()
             }, 1000);
@@ -1063,13 +1102,13 @@ setTimeout(() => {
             gifContainer.appendChild(gifElement)
             body.appendChild(gifContainer)
             err.textContent = "right answer"
-            audio.play()
+            // audio.play()
             err.classList.add('rightAnswer')
             shower.appendChild(err)
-            intialRightScore++
-            scoreValueRight = intialRightScore
+          
+            scoreValueRight++
             sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreValue.textContent = scoreValueRight
+            rightScoreContainer.textContent = scoreValueRight
             setTimeout(() => {
                 window.location.reload()
             }, 2000);
@@ -1079,10 +1118,9 @@ setTimeout(() => {
             err.textContent = "wrong answer"
             err.classList.add('worngAnswer')
             shower.appendChild(err)
-            intialWrongScore++
-            scoreValueWrong = intialWrongScore
+            scoreValueWrong++
             sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreValue.textContent = scoreValueWrong
+            wrongScoreContainer.textContent = scoreValueWrong
             setTimeout(() => {
                 window.location.reload()
             }, 1000);
@@ -1098,5 +1136,9 @@ setTimeout(() => {
 
 
 
-
+// setInterval(() => {
+//     console.log(b2)
+//     console.log(a2)
+ 
+// }, 5000);
 
