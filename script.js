@@ -16,7 +16,6 @@ let gifContainer = document.createElement('div')
 gifContainer.setAttribute('id', 'fireWork')
 
 
-wordNumber
 
 
 // gifContainer.setAttribute('id', 'fireWork')
@@ -764,46 +763,6 @@ let ArrayOfAudios = [
 
 
 
-// console.log(ArrayOfImages.length)
-// console.log(vocabArray.length)
-// console.log(ArrayOfAudios.length)
-
-
-// error checker
-
-
-// for (let i = 0; i < vocabArray.length; i++) {
-//     let elements = document.createElement('h2')
-//     elements.textContent = vocabArray[i].toLocaleLowerCase()
-//     header.appendChild(elements)
-//     let element2 = document.createElement('img')
-//     element2.setAttribute('src', ArrayOfImages[i])
-//     mainContainer.appendChild(element2)
-
-// //     // console.log(`${ArrayOfImages[i]}and ${vocabArray[i]}`)
-// // let element3=document.createElement('audio')
-// // element3.setAttribute('src',ArrayOfAudios[i])
-// // body.appendChild(element3)
-
-
-// // let element2=document.getElementById(`${vocabArray[i]}2`)
-// // console.log(element2)
-
-
-// // let allelement=document.querySelectorAll(`#${vocabArray[i]}2`)
-// // console.log(`${allelement}and ${vocabArray[i]}`)
-// // console.log(allelement)
-
-
-
-// }
-
-
-
-
-
-// for right score
-
 
 
 
@@ -834,8 +793,6 @@ else {
     scoreValueWrong = JSON.parse(retrievedWrongScore)
     wrongScoreContainer.textContent = scoreValueWrong
 }
-
-
 
 
 
@@ -873,53 +830,92 @@ submitButton1.addEventListener('click',()=>{
 
 })
 
-let a2=0
+
 
 // ending max range code here
 
 
-let random2 = Math.round(a2 + (b2 - a2) * Math.random())
+// adding min range here
+
+let minField=document.getElementById('minField')
+
+
+let minRetrivedValue=sessionStorage.getItem('minValueKey')
+
+if(maxRetrivedValue===null){
+    var a2=0
+    sessionStorage.setItem('minValueKey',a2)
+}
+
+else{
+         a2=minRetrivedValue
+    
+}
+
+
+
+
+
+submitButton1.addEventListener('click',()=>{
+    
+    a2=minField.value
+    sessionStorage.setItem('minValueKey',a2)
+    window.location.reload()
+
+
+
+
+
+})
+
+
+
+let b3=parseInt(b2)
+let a3=parseInt(a2)
+let random2=Math.round(a3+(b3-a3)*Math.random())
+
+let random3=Math.round(a3+(b3-a3)*Math.random())
+
+let random4=Math.round(a3+(b3-a3)*Math.random())
+
+let random5=Math.round(a3+(b3-a3)*Math.random())
+let checker=0
+
 console.log(random2)
-
-let random3 = Math.round(a2 + (b2 - a2) * Math.random())
 console.log(random3)
-
-let random4 = Math.round(a2 + (b2 - a2) * Math.random())
 console.log(random4)
-
-let random5 = Math.round(a2 + (b2 - a2) * Math.random())
 console.log(random5)
-
-
-
-
-
-
-
-
-let checker = 0
 
 let Image1
 let Image2
 let Image3
 let Image4
 
-let mainInterval = setInterval(() => {
-    if (ArrayOfImages[random2] != ArrayOfImages[random3] && ArrayOfImages[random2] != ArrayOfImages[random4] && ArrayOfImages[random2] != ArrayOfImages[random5] && ArrayOfImages[random3] != ArrayOfImages[random4] && ArrayOfImages[random3] != ArrayOfImages[random5] && ArrayOfImages[random4] != ArrayOfImages[random5]) {
-        checker = 1
+
+
+
+let mainInterval= setInterval(() => {
+    if(ArrayOfImages[random2]!=ArrayOfImages[random3] && ArrayOfImages[random2]!=ArrayOfImages[random4] && ArrayOfImages[random2]!=ArrayOfImages[random5] && ArrayOfImages[random3]!=ArrayOfImages[random4] && ArrayOfImages[random3]!=ArrayOfImages[random5] && ArrayOfImages[random4]!=ArrayOfImages[random5]){
+        checker=1
     }
 
 
-    else {
-        random2 = Math.round(a2 + (b2 - a2) * Math.random())
-        random3 = Math.round(a2 + (b2 - a2) * Math.random())
-        random4 = Math.round(a2 + (b2 - a2) * Math.random())
-        random5 = Math.round(a2 + (b2 - a2) * Math.random())
+    else{
+        random2=Math.round(a3+(b3-a3)*Math.random())
+
+        random3=Math.round(a3+(b3-a3)*Math.random())
+
+        random4=Math.round(a3+(b3-a3)*Math.random())
+
+        random5=Math.round(a3+(b3-a3)*Math.random())
     }
 
+    
+    
+}, 0.000000001);
 
 
-}, .1);
+
 
 
 
@@ -970,13 +966,11 @@ setTimeout(() => {
         imagesId.appendChild(Image1)
 
         Image2 = document.createElement('img')
-
         Image2.setAttribute('src', ArrayOfImages[random3])
         Image2.setAttribute('id', vocabArray[random3])
         imagesId.appendChild(Image2)
 
         Image3 = document.createElement('img')
-
         Image3.setAttribute('src', ArrayOfImages[random4])
         Image3.setAttribute('id', vocabArray[random4])
         imagesId.appendChild(Image3)
@@ -987,7 +981,7 @@ setTimeout(() => {
         imagesId.appendChild(Image4)
     }
 
-    // console.log(ArrayOfImages[99])
+
     let err = document.createElement('p')
 
     Image1.addEventListener('click', () => {
@@ -1135,10 +1129,4 @@ setTimeout(() => {
 
 
 
-
-// setInterval(() => {
-//     console.log(b2)
-//     console.log(a2)
- 
-// }, 5000);
 
