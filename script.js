@@ -36,7 +36,7 @@ let Musty = './musty.jpg'
 let Startled = './astonishing.jpeg'
 let Trepidation = './trapidation.jpg'
 let Indignant = './indignant.jpeg';
-let Audacity = './audacity.jpg';
+let Audacity = 'audacity.jpg';
 let Poised = './poised.jpg';
 let Fist = './fist.jpeg';
 let Inoculate = './inoculate.png';
@@ -62,7 +62,7 @@ let Decree = './decree.png'
 let Extract = './extract.jpg'
 let Yearning = './yearning.jpeg'
 let longing = './yearning.jpeg'
-let Prosperity = './prosperity.webp'
+let Prosperity = 'prosperity.webp'
 let Evil = './evil.jpeg'
 let Astonishing = './astonishing.jpeg'
 let Controversy = './controversy.png'
@@ -76,9 +76,9 @@ let Heal = './heal.gif'
 let Soul = './soul.webp'
 let Remedy = './remedy.png'
 let Recognize = './recongnize.webp'
-let Merely = './merely.png'
+let Merely = 'merely.png'
 let Vary = './vary.jpeg'
-let Banish = './banish.webp'
+let Banish = 'banish.webp'
 let Exile = './banish.webp'
 let Perpetuate = './perpetuate.jpg'
 let Aghast = './aghast.jpg'
@@ -97,7 +97,7 @@ let Make_Use = './make use.png'
 let Combine = './combine.webp'
 let Vital = './vital.png'
 let Idle = './idle.jpg'
-let Guts = './guts.jpeg'
+let Guts = 'guts.jpeg'
 let Exploit = './exploit.jpg'
 let Explode = './explode.gif'
 let Terrible = './terrible.jpg'
@@ -105,7 +105,7 @@ let Aquatic = './aquatic.webp'
 let Pale = './sorrow.png'
 let Fork = './fork.webp'
 let Intention = './intention.png'
-let Marvel = './marvel.png'
+let Marvel = 'marvel.png'
 let Awe = './awe.webp'
 let Verdict = './verdict.jpg'
 let Poison = './poison.webp'
@@ -116,7 +116,7 @@ let Replenish = './replenish.webp'
 let Huge = './huge.jpg'
 let Hasten = './hasten.jpg'
 let Peculiar = './peculiar.jpg'
-let Amenable = './amenable.gif'
+let Amenable = 'amenable.gif'
 let Potent = './potent.jpg'
 let Crippled = './crippled.jpg'
 let Antagonist = './adversary.jpg'
@@ -158,7 +158,7 @@ let Corridor = './corridor.jpg'
 let Fuss = './fuss.png'
 let Infer = './infer.webp'
 let Rumour = './rumour.png'
-let Guilty = './guilty.png'
+let Guilty = 'guilty.png'
 let Crawling = './crawling.jpg'
 let Slum = './slum.avif'
 let Denounce = './denounce.jpeg'
@@ -766,37 +766,6 @@ let ArrayOfAudios = [
 
 
 
-rightScoreContainer.textContent = 0
-wrongScoreContainer.textContent = 0
-
-let retrievedRightScore = sessionStorage.getItem('rightScore')
-let retrievedWrongScore = sessionStorage.getItem('wrongScore')
-
-
-// adding rightScore to the session storage
-if (retrievedRightScore === null) {
-    var scoreValueRight = 0
-    sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-}
-else {
-    scoreValueRight = JSON.parse(retrievedRightScore)
-    rightScoreContainer.textContent = scoreValueRight
-}
-
-// adding wrongScore to the session storage
-
-if (retrievedWrongScore === null) {
-    var scoreValueWrong = 0
-    sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-}
-else {
-    scoreValueWrong = JSON.parse(retrievedWrongScore)
-    wrongScoreContainer.textContent = scoreValueWrong
-}
-
-
-
-
 // adding max range here
 
 let maxField=document.getElementById('maxField')
@@ -814,21 +783,6 @@ else{
     
 }
 
-
-
-
-
-submitButton1.addEventListener('click',()=>{
-    
-    b2=maxField.value
-    sessionStorage.setItem('maxValueKey',b2)
-    window.location.reload()
-
-
-
-
-
-})
 
 
 
@@ -856,21 +810,37 @@ else{
 
 
 
-submitButton1.addEventListener('click',()=>{
-    
-    a2=minField.value
+submitButton1.addEventListener('click',(event)=>{
+    //  event.preventDefault()
+ 
+
+    console.log(typeof b2)
+  
+    if(maxField.value < minField.value){
+        b2 = minField.value
+        a2=maxField.value
+    }
+    else{
+        b2 = maxField.value
+        a2 = minField.value
+    }
+    b2 = parseInt(b2)
+    a2 = parseInt(a2)
+    if ((b2 - a2) <10){
+        b2 = a2 +10
+    }
+    sessionStorage.setItem('maxValueKey',b2)
     sessionStorage.setItem('minValueKey',a2)
+   if(document.getElementById('minField').value !="" && document.getElementById('maxField').value !=""){
+    event.preventDefault()
     window.location.reload()
-
-
-
-
-
+   }
 })
 
 
 
 let b3=parseInt(b2)
+b3 = b3-1
 let a3=parseInt(a2)
 let random2=Math.round(a3+(b3-a3)*Math.random())
 
@@ -881,250 +851,253 @@ let random4=Math.round(a3+(b3-a3)*Math.random())
 let random5=Math.round(a3+(b3-a3)*Math.random())
 let checker=0
 
-console.log(random2)
-console.log(random3)
-console.log(random4)
-console.log(random5)
 
 let Image1
 let Image2
 let Image3
 let Image4
 
+ while (checker != 1){
 
+     if(ArrayOfImages[random2]!=ArrayOfImages[random3] && ArrayOfImages[random2]!=ArrayOfImages[random4] && ArrayOfImages[random2]!=ArrayOfImages[random5] && ArrayOfImages[random3]!=ArrayOfImages[random4] && ArrayOfImages[random3]!=ArrayOfImages[random5] && ArrayOfImages[random4]!=ArrayOfImages[random5]){
+         checker=1
+        }
+        
+        
+        
+        else{  random2=Math.round(a3+(b3-a3)*Math.random())
+            
+            random3=Math.round(a3+(b3-a3)*Math.random())
+            
+            random4=Math.round(a3+(b3-a3)*Math.random())
 
+            random5=Math.round(a3+(b3-a3)*Math.random())
+        }
+    
 
-let mainInterval= setInterval(() => {
-    if(ArrayOfImages[random2]!=ArrayOfImages[random3] && ArrayOfImages[random2]!=ArrayOfImages[random4] && ArrayOfImages[random2]!=ArrayOfImages[random5] && ArrayOfImages[random3]!=ArrayOfImages[random4] && ArrayOfImages[random3]!=ArrayOfImages[random5] && ArrayOfImages[random4]!=ArrayOfImages[random5]){
-        checker=1
+        console.log("*****************hellooo*********************")
     }
-
-
-    else{
-        random2=Math.round(a3+(b3-a3)*Math.random())
-
-        random3=Math.round(a3+(b3-a3)*Math.random())
-
-        random4=Math.round(a3+(b3-a3)*Math.random())
-
-        random5=Math.round(a3+(b3-a3)*Math.random())
-    }
-
     
     
-}, 0.000000001);
 
 
 
-
+window.addEventListener('load',()=>{
+    let element = document.getElementById('mainContainer')
+    element.scrollIntoView()
+    // 
+})
 
 
 setTimeout(() => {
-    let randomArray = [random2, random3, random4, random5]
-    let a6 = 0
-    let b6 = 3
-    let random6 = Math.round(a6 + (b6 - a6) * Math.random())
+    let randomArray=[random2,random3,random4,random5]
+    let a6=0
+    let b6=3
+   let random6=Math.round(a6+(b6-a6)*Math.random())
 
+ 
+       let value=vocabArray[randomArray[random6]] 
+      mainwordlink.setAttribute('href',`#${value}2`)
+    let elements=document.getElementById(`${value}2`)
+    mainWord.addEventListener('click',()=>{
+  
+    }) 
 
-    let value = vocabArray[randomArray[random6]]
-    mainwordlink.setAttribute('href', `#${value}2`)
-    let elements = document.getElementById(`${value}2`)
-    mainWord.addEventListener('click', () => {
-
-    })
-
-    scroolup.addEventListener('click', () => {
-
-    })
-
-
-
-
-    if (value == undefined) {
-        mainwordlink.setAttribute('href', '#Whisper')
-    }
-
-    mainWord.textContent = vocabArray[randomArray[random6]]
-    console.log(mainWord.textContent)
-
-
-
-    SpeakAloud.setAttribute('src', ArrayOfAudios[randomArray[random6]])
-
-
-    PlayButton.addEventListener('click', () => {
-        SpeakAloud.play()
-    })
-
-
-    wordNumber.textContent = randomArray[random6] + 1
-    if (checker = 1) {
-
-        Image1 = document.createElement('img')
-        Image1.setAttribute('src', ArrayOfImages[random2])
-        Image1.setAttribute('id', vocabArray[random2])
-        imagesId.appendChild(Image1)
-
-        Image2 = document.createElement('img')
-        Image2.setAttribute('src', ArrayOfImages[random3])
-        Image2.setAttribute('id', vocabArray[random3])
-        imagesId.appendChild(Image2)
-
-        Image3 = document.createElement('img')
-        Image3.setAttribute('src', ArrayOfImages[random4])
-        Image3.setAttribute('id', vocabArray[random4])
-        imagesId.appendChild(Image3)
-
-        Image4 = document.createElement('img')
-        Image4.setAttribute('src', ArrayOfImages[random5])
-        Image4.setAttribute('id', vocabArray[random5])
-        imagesId.appendChild(Image4)
-    }
-
-
-    let err = document.createElement('p')
-
-    Image1.addEventListener('click', () => {
-        if (Image1.id == mainWord.textContent) {
-            let gifElement = document.createElement('img')
-            gifElement.setAttribute('src', gifSource)
-            gifContainer.appendChild(gifElement)
-            body.appendChild(gifContainer)
-            err.textContent = "right answer"
-            // audio.play()
-            err.classList.add('rightAnswer')
-            shower.appendChild(err)
-            scoreValueRight++
-            sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreContainer.textContent = scoreValueRight
-
-            setTimeout(() => {
-                window.location.reload()
-            }, 2000);
-        }
-
-        else if (Image1.id != mainWord.textContent) {
-            err.textContent = "wrong answer"
-            err.classList.add('worngAnswer')
-            shower.appendChild(err)
-        
-            scoreValueWrong++
-            sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreContainer.textContent = scoreValueWrong
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000);
-        }
-    })
-
-
-
-
-    Image2.addEventListener('click', () => {
-        if (Image2.id == mainWord.textContent) {
-            let gifElement = document.createElement('img')
-            gifElement.setAttribute('src', gifSource)
-            gifContainer.appendChild(gifElement)
-            body.appendChild(gifContainer)
-            err.textContent = "right answer"
-            // audio.play()
-            err.classList.add('rightAnswer')
-            shower.appendChild(err)
-        
-            scoreValueRight++
-            sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreContainer.textContent = scoreValueRight
-            setTimeout(() => {
-                window.location.reload()
-            }, 2000);
-        }
-
-        else if (Image2.id != mainWord.textContent) {
-
-            err.textContent = "wrong answer"
-            err.classList.add('worngAnswer')
-            shower.appendChild(err)
-           
-            scoreValueWrong++
-            sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreContainer.textContent = scoreValueWrong
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000);
-        }
-    })
-
-
-    Image3.addEventListener('click', () => {
-        if (Image3.id == mainWord.textContent) {
-            let gifElement = document.createElement('img')
-            gifElement.setAttribute('src', gifSource)
-            gifContainer.appendChild(gifElement)
-            body.appendChild(gifContainer)
-            err.textContent = "right answer"
-            // audio.play()
-            err.classList.add('rightAnswer')
-            shower.appendChild(err)
-        
-            scoreValueRight++
-            sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreContainer.textContent = scoreValueRight
-            setTimeout(() => {
-                window.location.reload()
-            }, 2000);
-        }
-
-        else if (Image3.id != mainWord.textContent) {
-
-            err.textContent = "wrong answer"
-            err.classList.add('worngAnswer')
-            shower.appendChild(err)
+   
     
-            scoreValueWrong++
-            sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreContainer.textContent = scoreValueWrong
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000);
-        }
-    })
+   
+    
+    
+    //   if(value==undefined){
+    //     mainwordlink.setAttribute('href','#Whisper')
+    //   }
 
-    Image4.addEventListener('click', () => {
-        if (Image4.id == mainWord.textContent) {
-            let gifElement = document.createElement('img')
-            gifElement.setAttribute('src', gifSource)
-            gifContainer.appendChild(gifElement)
-            body.appendChild(gifContainer)
-            err.textContent = "right answer"
-            // audio.play()
-            err.classList.add('rightAnswer')
-            shower.appendChild(err)
-          
-            scoreValueRight++
-            sessionStorage.setItem('rightScore', JSON.stringify(scoreValueRight))
-            rightScoreContainer.textContent = scoreValueRight
-            setTimeout(() => {
-                window.location.reload()
-            }, 2000);
-        }
-
-        else if (Image4.id != mainWord.textContent) {
-            err.textContent = "wrong answer"
-            err.classList.add('worngAnswer')
-            shower.appendChild(err)
-            scoreValueWrong++
-            sessionStorage.setItem('wrongScore', JSON.stringify(scoreValueWrong))
-            wrongScoreContainer.textContent = scoreValueWrong
-            setTimeout(() => {
-                window.location.reload()
-            }, 1000);
-        }
-    })
+       mainWord.textContent=vocabArray[randomArray[random6]] 
+      console.log(mainWord.textContent)
+    //   clearInterval(mainInterval)
+  
+      
+    
+       SpeakAloud.setAttribute('src',ArrayOfAudios[randomArray[random6]])
 
 
+       PlayButton.addEventListener('click',()=>{
+          SpeakAloud.play()
+      }) 
+      
 
+       wordNumber.textContent=randomArray[random6]+1
+    if(checker==1){
+           
+     Image1=document.createElement('img')
+    Image1.setAttribute('src',ArrayOfImages[random2])
+    Image1.setAttribute('id',vocabArray[random2])
+    imagesId.appendChild(Image1)
+    
+     Image2=document.createElement('img')
+    
+    Image2.setAttribute('src',ArrayOfImages[random3])
+    Image2.setAttribute('id',vocabArray[random3])
+    imagesId.appendChild(Image2)
+    
+     Image3=document.createElement('img')
+    
+    Image3.setAttribute('src',ArrayOfImages[random4])
+    Image3.setAttribute('id',vocabArray[random4])
+    imagesId.appendChild(Image3)
+    
+     Image4=document.createElement('img')
+    Image4.setAttribute('src',ArrayOfImages[random5])
+    Image4.setAttribute('id',vocabArray[random5])
+    imagesId.appendChild(Image4)
+    }
 
-}, 500);
+      // console.log(ArrayOfImages[99])
+      let err=document.createElement('p')
+
+      Image1.addEventListener('click',()=>{
+          if(Image1.id==mainWord.textContent){
+              let gifElement=document.createElement('img')
+              gifElement.setAttribute('src',gifSource)
+              gifContainer.appendChild(gifElement)
+              body.appendChild(gifContainer)
+              err.textContent="right answer"
+            //   audio.play()
+              err.classList.add('rightAnswer')
+              shower.appendChild(err)
+              intialRightScore++
+              scoreValueRight=intialRightScore
+              sessionStorage.setItem('rightScore',JSON.stringify(scoreValueRight))
+              rightScoreValue.textContent=scoreValueRight
+  
+             setTimeout(() => {
+              window.location.reload()
+             }, 2000);
+          }
+      
+          else if(Image1.id!=mainWord.textContent){
+              err.textContent="wrong answer"
+              err.classList.add('worngAnswer')
+              shower.appendChild(err)
+              intialWrongScore++
+              scoreValueWrong=intialWrongScore
+              sessionStorage.setItem('wrongScore',JSON.stringify(scoreValueWrong))
+              wrongScoreValue.textContent=scoreValueWrong
+              setTimeout(() => {
+                  window.location.reload()
+                 }, 1000);
+          }
+      })
+  
+      
+     
+  
+      Image2.addEventListener('click',()=>{
+          if(Image2.id==mainWord.textContent){
+              let gifElement=document.createElement('img')
+              gifElement.setAttribute('src',gifSource)
+              gifContainer.appendChild(gifElement)
+              body.appendChild(gifContainer)
+              err.textContent="right answer"
+            //   audio.play()
+              err.classList.add('rightAnswer')
+              shower.appendChild(err)
+              intialRightScore++
+              scoreValueRight=intialRightScore
+              sessionStorage.setItem('rightScore',JSON.stringify(scoreValueRight))
+              rightScoreValue.textContent=scoreValueRight
+              setTimeout(() => {
+                  window.location.reload()
+                 }, 2000);
+          }
+      
+          else if(Image2.id!=mainWord.textContent){
+  
+              err.textContent="wrong answer"
+              err.classList.add('worngAnswer')
+              shower.appendChild(err)
+              intialWrongScore++
+              scoreValueWrong=intialWrongScore
+              sessionStorage.setItem('wrongScore',JSON.stringify(scoreValueWrong))
+              wrongScoreValue.textContent=scoreValueWrong
+              setTimeout(() => {
+                  window.location.reload()
+                 }, 1000);
+          }
+      })
+  
+  
+      Image3.addEventListener('click',()=>{
+          if(Image3.id==mainWord.textContent){
+              let gifElement=document.createElement('img')
+              gifElement.setAttribute('src',gifSource)
+              gifContainer.appendChild(gifElement)
+              body.appendChild(gifContainer)
+              err.textContent="right answer"
+            //   audio.play()
+              err.classList.add('rightAnswer')
+              shower.appendChild(err)
+              intialRightScore++
+              scoreValueRight=intialRightScore
+              sessionStorage.setItem('rightScore',JSON.stringify(scoreValueRight))
+              rightScoreValue.textContent=scoreValueRight
+              setTimeout(() => {
+                  window.location.reload()
+                 },2000);
+          }
+      
+          else if(Image3.id!=mainWord.textContent){
+  
+              err.textContent="wrong answer"
+              err.classList.add('worngAnswer')
+              shower.appendChild(err)
+              intialWrongScore++
+              scoreValueWrong=intialWrongScore
+              sessionStorage.setItem('wrongScore',JSON.stringify(scoreValueWrong))
+              wrongScoreValue.textContent=scoreValueWrong
+              setTimeout(() => {
+                  window.location.reload()
+                 }, 1000);
+          }
+      })
+  
+      Image4.addEventListener('click',()=>{
+          if(Image4.id==mainWord.textContent){
+              let gifElement=document.createElement('img')
+              gifElement.setAttribute('src',gifSource)
+              gifContainer.appendChild(gifElement)
+              body.appendChild(gifContainer)
+              err.textContent="right answer"
+            //   audio.play()
+              err.classList.add('rightAnswer')
+              shower.appendChild(err)
+              intialRightScore++
+              scoreValueRight=intialRightScore
+              sessionStorage.setItem('rightScore',JSON.stringify(scoreValueRight))
+              rightScoreValue.textContent=scoreValueRight
+              setTimeout(() => {
+                  window.location.reload()
+                 }, 2000);
+          }
+      
+          else if(Image4.id!=mainWord.textContent){
+              err.textContent="wrong answer"
+              err.classList.add('worngAnswer')
+              shower.appendChild(err)
+              intialWrongScore++
+              scoreValueWrong=intialWrongScore
+              sessionStorage.setItem('wrongScore',JSON.stringify(scoreValueWrong))
+              wrongScoreValue.textContent=scoreValueWrong
+              setTimeout(() => {
+                  window.location.reload()
+                 }, 1000);
+          }
+      })
+  
+  
+
+    
+   }, 500);
 
 
 
