@@ -4,8 +4,8 @@ let mainWord = document.getElementById('mainWord')
 let shower = document.getElementById('shower')
 let testImage = document.getElementById('testImage')
 let imagesId = document.getElementById('imagesId')
-let rightScoreContainer = document.getElementById('rightScoreContainer')
-let wrongScoreContainer = document.getElementById('wrongScoreContainer')
+let rightScoreValue=document.getElementById('rightScoreValue')
+let wrongScoreValue=document.getElementById('wrongScoreValue')
 let wordNumber = document.getElementById('wordNumber')
 let btn = document.getElementById('btn')
 let audio = document.getElementById('audio')
@@ -651,7 +651,59 @@ let UrgeAudio = './Urge.mp3'
 
 
 
-// asli mall yaha hai
+// asli mall yaha se suru  hai
+
+
+let intialRightScore
+let intialWrongScore
+
+
+// for right score
+if(sessionStorage.getItem('rightScore')==0){
+    intialRightScore=0
+    rightScoreValue.textContent=intialRightScore
+}
+else(
+    intialRightScore=sessionStorage.getItem('rightScore')
+)
+
+// for worng score
+
+if(sessionStorage.getItem('wrongScore')==0){
+    intialWrongScore=0
+    wrongScoreValue.textContent=intialWrongScore
+}
+else(
+    intialWrongScore=sessionStorage.getItem('wrongScore')
+)
+
+rightScoreValue.textContent=0
+wrongScoreValue.textContent=0
+
+let retrievedRightScore=sessionStorage.getItem('rightScore')
+let retrievedWrongScore=sessionStorage.getItem('wrongScore')
+// adding rightScore to the session storage
+if(retrievedRightScore===null){
+    var scoreValueRight=0
+    sessionStorage.setItem('rightScore',JSON.stringify(scoreValueRight))
+}
+else{
+    scoreValueRight=JSON.parse(retrievedRightScore)
+    rightScoreValue.textContent=scoreValueRight
+}
+
+// adding wrongScore to the session storage
+
+if(retrievedWrongScore===null){
+    var scoreValueWrong=0
+    sessionStorage.setItem('wrongScore',JSON.stringify(scoreValueWrong))
+}
+else{
+    scoreValueWrong=JSON.parse(retrievedWrongScore)
+    wrongScoreValue.textContent=scoreValueWrong
+}
+
+
 
 
 
