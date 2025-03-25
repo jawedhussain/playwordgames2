@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="https://kit.fontawesome.com/30097378c8.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordGame2</title>
+</head>
+<body id="body">
+    <div id="mainContainer">
+      <!-- <div id="header"></div>
+      <div id="imagetotest"></div> -->
+     
+    
+        <div id="imageContainer">
+            <div class="headerContainer">
+                <div class="showText">
+              
+           <a id="mainwordlink"  href=""> <h1 id="mainWord"> </h1>  </a>
+              
+                    
+                </div>
+              
+                
+            </div>
+           
+            <i class="fas fa-volume-up" id="playButton" style="margin-bottom: 10px; margin-top: 0;"></i>
+            <span id="wordNumber"></span>
+            <audio id="speakAloud" src=""></audio>
+            <div id="shower"></div>
+            <div class="images" id="imagesId">
+            </div>
+            <h1 id="scoreRight">Right:<span id="rightScoreValue"></span></h1>
+            <h1 id="scoreWrong">Wrong:<span id="wrongScoreValue"></span></h1>
+           
+            
+  
+          
+        </div>
+
+        
+
+
+        <a href="#mainContainer"> 
+              <div id="scroolup"> <img src="arrow up.jpg" alt="" height="50px" width="50px"> </div>
+            </a>
+        
+       <!-- <audio id="audio" src="correct.mp3"></audio> -->
+
+       <div id="inputContainer">
+        <div style="text-align: center; text-transform: capitalize;margin-bottom: 5px;">min and max should be 10 apart</div>
+        <!-- <form> -->
+          <input type="number" name="min" id="minField" placeholder="Min Range" required style="margin-bottom: 5px;">
+          <input type="number" name="max" id="maxField" placeholder="Max Range" required style="margin-bottom: 5px;">
+          <button type="submit" name="submitButton1" id="submitButton1">Submit</button>
+         <!-- </form>  -->
+            
+     </div>
+
+
+
+
+<div id="meaningContent">
+  
+    <div class="content">
+        <p class="word" id="Desperate2" >1. Desperate(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> निराश/ बेचैन </p>
+        <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">iam very Desperate to know my exam results.</p></div>
+   </div>
+
+   <div class="content">
+       <p class="word" id="Gulp2">2. Gulp(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">गटकना</p>
+       <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Charlie drank the whisky in one gulp.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Melancholy2">3. Melancholy(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">उदासी</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The music suited her melancholy mood.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Strangle2">4. Strangle(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">गला  घोंट कर किसी को मार देना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He said his father had tried to strangle him thirty or forty times or more.
+  </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Musty2">5. Musty(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बदबूदार महक
+  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The wine tastes musty.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Startled2">6. Startled(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चौंका हुआ</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I was startled by her question.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Trepidation2">7. Trepidation(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">घबराहट </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He knocked on the door with some trepidation.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Indignant2">8. Indignant(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">नापसंद</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I got an indignant reply from Mr Norris.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Audacity2">9. Audacity(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">साहस</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I can't believe he had the audacity to ask me for more money!</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Poised2">10. Poised(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">करने को तैयार 
+  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The cat crouched in the grass, poised to jump. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Fist2">11. Fist(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">मुट्ठी</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  She held the money tightly in her fist. </p></div>
+  </div>
+
+  
+  <div class="content">
+   <p class="word" id="Inoculate2">12. Inoculate(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">इंजेक्‍शन लगाकर बीमारी से बचाव करना,</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Your son should be inoculated against smallpox. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Despite2">13. Despite(prepositon)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">के बावजूब </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> despite being a rich man he does not wear expensive cloths. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Heal2">14. Heal(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">फिर से स्वस्थ हो जाना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  The wound on your hand would heal over soon. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Peace2">15. Peace(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">शांति </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">If you wish for peace, be prepared for war.  </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Lodge2">16. Lodge(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी बात का मन में पक्‍के तौर पर बैठ जाना   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She lodged the number firmly in her mind. </p></div>
+  </div>
+
+  
+  <div class="content">
+   <p class="word"  id="Wisdom2">17. Wisdom(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अक़लमंदी </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Learn wisdom by the follies of others. </p></div>
+  </div>
+
+
+  <div class="content">
+    <p class="word"  id="lurk2">18. lurk(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कहीं छिपकर बैठना हमला करने के लिए </p>
+    <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The cat is lurking behind the tree to catch the rat. </p></div>
+   </div>
+ 
+
+
+
+  <div class="content">
+   <p class="word"  id="Ailment2">19. Ailment(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बीमारी </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He's always complaining of some ailment.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Overwhelmed2">20. Overwhelmed(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज से परेशान हो जाना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I was overwhelmed by feelings of depression.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Embarrassed2">21. Embarrassed(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">शर्मिंदा </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I was embarrassed by their compliment.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Nectar2">22. Nectar(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अमृत </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">On such a hot day, even water was nectar . </p></div>
+  </div>
+
+<div class="content">
+  <p class="word"  id="Misery2">23. Misery(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">तकलीफ़ </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> All that money brought nothing but sadness and misery and tragedy.</p></div>
+ </div>
+
+
+ <div class="content">
+ <p class="word"  id="Treasure2">24. Treasure(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">ख़ज़ाना </p>
+ <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He went to the island looking for treasure.</p></div>
+</div>
+
+
+<div class="content">
+   <p class="word"  id="Superstition2">25. Superstition(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अंधविश्‍वास </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I don't believe in the old superstition that the number 13 is unlucky.
+   </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word"  id="Incipient2">26. Incipient(adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">शुरूआती </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The project is still in its incipient stages </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Perspiration2">27. Perspiration(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> पसीना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Her face was wet with perspiration. </p></div>
+  </div>
+  
+  <div class="content">
+   <p class="word"  id="Trembling2">28. Trembling(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">काँपना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">My legs were trembling with fear.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Despair2">29. Despair(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> निराशा</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He who has never hoped can never despair.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Intrude2">30.  Intrude(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी जगह बिना अनुमति(permission)के घूस जाना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  I'm sorry to intrude, but I need to talk to someone.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Dismay2">31. Dismay(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> निराशा</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He looked at her in dismay.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Decree2">32. Decree(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> सरकार द्वारा जारी आदेश(order)</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> More than 200 people were freed by military decree.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Extract2">33. Extract (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी वस्‍तु को बाहर निकालना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> We can extract oil from shale.</p></div>
+  </div>
+
+
+  
+<div class="content">
+   <p class="word"  id="Yearning2">34. Yearning(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> तड़प </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> They had a deep yearning for their homeland.</p></div>
+  </div>
+
+ 
+  <div class="content">
+   <p class="word"  id="longing2">35. longing(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> तड़प</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   People are longing for peace.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Prosperity2">36. Prosperity(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सफलता</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> In time of prosperity, friends will be plenty  </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Evil2">37. Evil(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बुराई </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> See no evil, hear no evil, speak no evil. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Astonishing2">38. Astonishing(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">आश्‍चर्यजनक</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The ease with which she learns languages is astonishing.
+  </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Controversy2">39. Controversy(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">लोगो में किसी बात को लेकर बहस  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The judges' decision provoked controversy. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Approach2">40.Approach(verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पास आना या पहुँचना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The wine made him bold enough to approach her and introduce himself.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word"  id="Porch2">41. Porch(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">घर के छत का समयाना 
+   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She stood in the porch and rang the doorbell. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word"  id="Accomplish2">42. Accomplish(verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी मुश्किल  काम को करने में सफल होना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  You can accomplish anything if you believe in it.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Sloth2">43. Sloth(noun)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सुस्ती </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Sloth is the key of poverty.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Oblivious2">44. Oblivious(adj)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बेख़बर  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was oblivious of what was happening.. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word"  id="Accurate2">45. Accurate(verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">एकदम सही   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He has made an accurate measurement of my garden. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Soul2">46. Soul(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">आत्मा</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The soul cannot live without love. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Remedy2">47. Remedy(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">इलाज </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  Patience is the best remedy (or medicine).</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Recognize2">48. Recognize(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी को पहचानना   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Blind persons can often recognize objects by feeling them. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Merely2">49. Merely(adverb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सिर्फ   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I merely wanted to see it. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Vary2">50. Vary(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बदलना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  People vary very much in their ideas. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Banish2">51. Banish(verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी इंसान या वस्‍तु को निकाल देना कही से </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">They tried to banish him from politics. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Exile2">52. Exile(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी इंसान या वस्‍तु को निकाल देना कही से </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  Napoleon was sent into exile on an island. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Perpetuate2">53. Perpetuate(verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">लंबे समय तक क़ायम या बनाए रखना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">They decided to perpetuate the memory of their leader by erecting a statue. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Aghast2">54. Aghast(adj)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">डर जाना या भौचक्का हो जाना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">. Everyone was aghast at the verdict. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Occult2">55. Occult(adj)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जादूई </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   He's interested in the occult.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Conviction2">56. Conviction(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">मजबूत भरोसा  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He said he agreed but his voice lacked conviction.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Ruminate2">57. Ruminate(verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज के बारे में deep में सोचना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> She ruminated for weeks about whether to tell him or not. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Dissipate2">58. Dissipate(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">धीरे-धीरे कम होते-होते ग़ायब हो जाना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The police managed to dissipate the mob in minutes. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Excess2">59. Excess(noun/adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जरुरत से जयादा </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> he medicine can be harmful if taken in excess.. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Doom2">60. Doom(noun)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> क़यामत / विनाश</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The report on our economic situation is full of doom and gloom.. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Gloomy2">61. Gloomy(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> उदास </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> You must rid yourself of this gloomy mood.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Impediment2">62. Impediment(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अड़चन / रुकावट </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The new taxes were a major impediment to economic growth. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Stymied2">63. Stymied(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अड़चन / रुकावट </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He found himself stymied by an old opponent.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Analysis2">64. Analysis(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">छान बीन करना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  Further analysis of the data is needed. </p></div>
+  </div>
+
+
+
+
+  <div class="content">
+   <p class="word" id="Tendency2">65. Tendency(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">एक आदमी जैसा वय्हवार(behave) करता है आदतन </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He has a tendency to forget things. </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Make_Use2">66. Make_Use (verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">उपयोग करना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> She  was making use of her new house </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Combine2">67. Combine(verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">मिलाना/p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Hydrogen and oxygen combine to form water.(<span class="addonmeaning"></span>). </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Vital2">68. Vital(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बहुत जरुरी  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The heart performs a vital bodily function.</p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Idle2">69. Idle(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कामचोर/ time pass karna  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> An idle person is the devil’s cusion.</p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Guts2">70. Guts(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">हिम्मत</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  I don't have the guts to say that to my boss.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Exploit2">71. Exploit(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जुल्म करना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Laws exist to stop companies exploiting their employees. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Explode2">72. Explode(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">फट जाना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   The bomb failed to explode.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Terrible2">73. Terrible(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">डरावना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I had a terrible dream last night.(<span class="addonmeaning"></span>).</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Aquatic2">74. Aquatic(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पानी में रहने वाला जानवर </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He has also experimented with aquatic plants. </p></div>
+  </div>
+
+
+
+
+  <div class="content">
+   <p class="word" id="Pale2">75. Pale(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">दुखी /फीका  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He looks pale in the moonlight.</p></div>
+  </div>
+
+
+
+
+  <div class="content">
+   <p class="word" id="Fork2">76. Fork(noun) ==>Shout </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चम्मच </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  We use a fork to eat food. </p></div>
+  </div>
+
+
+
+
+  <div class="content">
+   <p class="word" id="Intention2">77. Intention(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">नियत  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">What was your intention in doing that? </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Marvel2">78. Marvel(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चमत्कार</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> It's a marvel that he escaped unhurt. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Awe2">79. Awe(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">डर या तारीफ से भरा emotion  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The sight filled us with awe. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Verdict2">80. Verdict(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">फैसला </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Two of the judges disagreed with the verdict.</p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Poison2">81. Poison(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जहर</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Suspicion(सक) is the poison of true friendship.  </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Wreak_Havoc2">82. Wreak_Havoc(verb) ==>Pull </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">उथल पुथल मचा देना / चीजों को बर्बाद कर देना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  He Wreaked Havoc in the whole city.</p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Replenish2">83. Replenish(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">दोबारा पहले जैसे बना देना /  नया जैसा कर देना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> All  creatures need sleep to replenish their energies </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Huge2">84. Huge(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बहुत बड़ा </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Your room's huge compared to mine. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Hasten2">85. Hasten(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कोई काम या बात जल्‍दी-जल्‍दी करना या कहना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I hasten to tell you that your car has been found.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Peculiar2">86. Peculiar(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">असामान्‍य / अज़ीब /  विचित्र </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  They behaved in a very peculiar way.</p></div>
+  </div>
+
+
+
+
+  <div class="content">
+   <p class="word" id="Amenable2">87. Amenable(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">ख़ुशी से accept करने वाला</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She was always a very amenable child. </p></div>
+  </div>
+
+
+
+
+  <div class="content">
+   <p class="word" id="Potent2">88. Potent(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> ताक़तवर </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Beauty is potent, but money is more potent.</p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Crippled2">89. Crippled(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> विकलांग </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She was crippled in a car accident. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Antagonist2">90. Antagonist(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">विरोधी</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He wondered what his antagonist was doing.</p></div>
+  </div>
+
+
+
+
+
+  <div class="content">
+   <p class="word" id="Imbue2">91. Imbue(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">दिल में बैठा देना / रंग चढ़ाना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He managed to imbue his employees with team spirit..</p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Despondent2">92. Despondent(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">निराश </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I feel despondent when my work is rejected.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Foresee2">93. Foresee(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पहले से भांप लेना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> It is impossible to foresee the future. </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Convalescence2">94. Convalescence(noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पहले से भांप लेना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Convalescence is the period when you are still sick after you get well. </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Spurn2">95. Spurn(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">धिक्कारना / मना कर देना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> She spurned my offers of help. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Vexing2">96. Vexing(adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जो पसंद न हो </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I found their attitude extremely vexing.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Stagnate2">97. Stagnate(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बन्द हो जाना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Everyone needs new challenges. Otherwise you just stagnate.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Hunt2">98. Hunt(verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">शिकार करना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   Some animals hunt at night.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Explore2">99. Explore (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">छान-बीन करना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> We need to explore every possible plan.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Discern2">100. Discern (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अंतर(difference) पहचानना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The man couldn't discern between right and wrong.e</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Loyal2">101. Loyal (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">वफादार </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  They had remained loyal to the president. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Alter2">102. Alter (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बदलना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  She had to alter her clothes after losing weight. </p></div>
+  </div>
+
+  
+  <div class="content">
+   <p class="word" id="Leisure2">103. Leisure (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">फुरसत वाला समय  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Most people only have a limited amount of leisure time. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Belligerent2">104. Belligerent (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">लड़ाकू </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He is always very belligerent towards me. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Gush2">105. Gush (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बह निकलना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> There was a gush of blood from the wound. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Caveat2">106. Caveat (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चेतावनी  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> She will be offered treatment, with the caveat that it may not work. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Indispensable2">107. Indispensable (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बिलकुल जरुरी </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> No man is indispensable. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Provision2">108. Provision (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> जरुरत के सामान   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The government is responsible for the provision of health care. </p></div>
+  </div>
+
+  
+  <div class="content">
+   <p class="word" id="Timid2">109. Timid (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">डरपोक </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Timid dogs bark most. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Janitor2">110. Janitor (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">होटल में साफ़ सफाई का काम संभालने वाला  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The janitor was just sweeping up as I left the building.. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Agony2">111. Agony (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">दर्द  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He lay in agony until the doctor arrived. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Jeer2">112. Jeer (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">मज़ाक उड़ाना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I didn't come here today to jeer: I want to give advice. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Predicament2">113. Predicament (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बुरे हालत में होना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  E Other companies are in an even worse predicament than ourselves. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Vague2">114. Vague (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">ठीक ठीक न दिखना या ठीक ठीक न समझ आना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   His answer was very vague. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Perpetrate2">115. Perpetrate (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पाप करना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Only an insane person could perpetrate such a horrible crime. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Nag2">116. Nag (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">परेशान करने वाला चीज   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Nobody likes to work with a nag. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Coaxing2">117. Coaxing (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">मीठी बातें से मनाना
+  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">A mother was coaxing her reluctant child into the water. </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Ecstasy2">118. Ecstasy (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बहुत जयादा सुकून मिल जाना   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">she is in Ecstasy of love  ( <span class="addonmeaning"></span> ) in there. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Erudite2">119. Erudite (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बहुत जयादा अकल्मन्द   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> This is an erudite old man.  </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Detriment2">120. Detriment (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">नुक़सान  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Smoking is a detriment to one's health.  </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Savagely2">121. Savagely (ad-verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जंगलीपन  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was eating in a Savagely manner.  </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Squander2">122. Squander (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> पैसा लूटना या बर्बाद करना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  We should not Squander our wealth in gambling </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Flair2">123. Flair (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज को करने में महारत होना   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He has a flair for languages. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Captivating2">124. Captivating (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> दिलकस दिल को भा जाने वाले चीज   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Roosevelt was a captivating speaker. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Corridor2">125. Corridor (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> गलियारे  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The corridor echoed with footsteps.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Fuss2">126. Fuss (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> गड़बड़  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Stop all this fuss and get on with your work..</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Infer2">127. Infer (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी चीज का मतलब समझना   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I can infer from what you've said that you will do it.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Rumour2">128. Rumour (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> अफवाह  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">it was a Rumour that the world will end in 2012.</p></div>
+  </div>
+
+  
+  <div class="content">
+   <p class="word" id="Count_On2">129. Count_On (phresal-verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> भरोसा करना   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">you can Count_On on me i will not betray you.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Guilty2">130. Guilty (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> मुजरिम   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I feel really guilty at forgetting her birthday again.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Chatty2">131. Chatty (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बहुत जयादा बात करने वाला   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">You're very chatty today, Alice.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Crawling2">132. Crawling (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> जमीन पर रेंगना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> A man was crawling away from the burning bus.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Slum2">133. Slum (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> झोपड़पट्टी </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Mumbai has the biggest slum in the world.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Denounce2">134. Denounce (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> इलज़ाम लगा देना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">We must denounce injustice and oppression.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Admonition2">135. Admonition (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> चेतावनी</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Many illiterates can not read the admonition on a pack of cigarettes.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Snub2">136. Snub (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> अपमान</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Iam not here to Snub you.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Berate2">137. Berate (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">धमकाना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She berated him in public.</p></div>
+  </div>
+  
+  <div class="content">
+   <p class="word" id="Exuberant2">138. Exuberant (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">ऊर्जा(energy) से भरा हुआ  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He is energetic and exuberant.</p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Sorrow2">139. Sorrow (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">दुख </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Joy often comes after sorrow, like morning after night.</p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Frantic2">140. Frantic (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अजीब बर्ताव करने वाला /  पागल  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Let's go back. Your parents must be getting frantic by now.. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Drudgery2">141. Drudgery (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कड़ी मेहनत  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> But the drudgery of standing in queues for hours  is awful. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Poking2">142. Poking (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी का ध्यान अपनी तरफ लेन के लिए उसे चुभाना   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  Jhon was poking him to get his atttention. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Nudging2">143. Nudging (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी का ध्यान अपनी तरफ लेन के लिए उसे चुभाना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> People were nudging each other and pointing at me </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Ravages2">144. Ravages (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">तहस-नहस करना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The forest was ravaged by fire. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Disgruntled2">145. Disgruntled (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चिड़चिड़ा / नाराज </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  The late dinner disgruntled my father. </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Incinerate2">146. Incinerate (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> जला देना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">All the infected clothing was incinerated. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Defy2">147. Defy (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चुनौती देना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">If you defy the law, you may find yourself in prison. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Exhort2">148. Exhort (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">हौसला देना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The general exhorted his men to fight well.  </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Consternation2">149. Consternation (noun) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> आतंक </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The announcement created surprise and consternation.  </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Incensed2">150. Incensed (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बहुत ज्यादा गुस्सा   </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The workforce was incensed by the decision.  </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Menace2">151. Menace (noun)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> खतरा </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   Drunk drivers are a menace to everyone. </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Amend2">152. Amend (verb)   </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> सुधार करना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   You must amend your pronunciation. </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Credibility2">153. Credibility (adj)   </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी पर भरोसा  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">   The police have lost their credibility.  </p></div>
+  </div>
+  
+
+
+  <div class="content">
+    <p class="word" id="Contrived2">154.   Contrived (adj)   </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">काल्पनिक</p>
+    <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">    The prisoners contrived a way to escape  </p></div>
+   </div>
+   
+
+
+  <div class="content">
+    <p class="word" id="Anxiety2">155.Anxiety (noun)   </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> चिंता  </p>
+    <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  She was distracted with anxiety.  </p></div>
+   </div>
+   
+
+
+
+  <div class="content">
+   <p class="word" id="Bald2">156. Bald (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">गंजा  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">    Too much knowledge makes the head bald.   </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Uncanny2">157. Uncanny (adj)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">रहस्यमय </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">     An uncanny light seemed to be coming from the castle.  </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Flattery2">158. Flattery (verb)  </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चापलूसी</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She persuaded him with flattery.       </p></div>
+  </div>
+  
+
+  <div class="content">
+   <p class="word" id="Delirious2">159. Delirious (adj) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अजीब वयहवार करने वाला </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He's so delirious he doesn't know where he is.    </p></div>
+  </div>
+
+  <div class="content">
+   <p class="word" id="Adroit2">160. Adroit (verb) </p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">चालाक /माहिर </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He is adroit at making excuses.     </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Outset2">161. Outset (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">शुरू</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I warned you at the outset not to trust him, and you wouldn't listen to me. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Irate2">162. Irate (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">गुस्सा</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  We have received some irate phone calls from customers.  </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Candour2">163. Candour (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सीधा सीधा बोल देना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> She spoke with remarkable candour about her experiences.  </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Hostile2">164. Hostile (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">आक्रामक</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I have no idea why he is hostile to me.  </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Surreal2">165. Surreal (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">असली</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  But the images in these books are surreal.   </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Estranged2">166. Estranged (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">एक दूसरे से दुरी बना लेना जैसे के पहचानते न हो </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The argument estranged him from his brother.   </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Raconteur2">167. Raconteur (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बयान करनेवाला</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He was a brilliant raconteur.  </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Alleviate2">168. Alleviate (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">हलका कर देना /असर कम कर देना  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The doctor gave her an injection to alleviate the pain.  </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Nauseating2">169. Nauseating (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">उलटी आने की इच्छा होना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  I don't want to eat anything, I'm nauseating.  </p></div>
+  </div>
+
+
+
+  <div class="content">
+   <p class="word" id="Conceit2">170. Conceit (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">घमंडी</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  He's full of conceit. </p></div>
+  </div>
+
+
+  <div class="content">
+   <p class="word" id="Tumult2">171. Tumult (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> लोगो के द्वारा नारेबाजी </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  The whole country is in tumult. </p></div>
+  </div>
+
+
+
+
+  <div class="content">
+   <p class="word" id="Pathetic2">172. Pathetic (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बहुत बुरा हाल </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> you can see the Pathetic condition of the road.  </p></div>
+</div>
+
+
+ <div class="content">
+   <p class="word" id="Devour2">173. Devour (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> लालच से भोजन करना</p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Eat slowly don't Devour like a beast.   </p></div>
+</div>
+
+
+
+<div class="content">
+   <p class="word" id="Monotonous2">174. Monotonous (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> उबाने वाला / boring चीज  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I want to  quit this Monotonous job.   </p></div>
+</div>
+
+
+
+
+<div class="content">
+   <p class="word" id="Ensure2">175. Ensure (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> भरोसा दिलाना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I can not Ensure that i will come on time.   </p></div>
+</div>
+
+
+
+
+<div class="content">
+   <p class="word" id="Spit2">176. Spit (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> थूकना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> don't spit in front of the house.   </p></div>
+</div>
+
+
+
+<div class="content">
+   <p class="word" id="Voluble2">177. Voluble (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बहुत जयादा बात करने वाला </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He became very voluble and told her everything.  </p></div>
+</div>
+
+
+<div class="content">
+   <p class="word" id="Infallible2">178. Infallible (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> जो अपने काम में माहिर हो कभी गलती न करे  </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Doctors are not infallible.  </p></div>
+</div>
+
+
+<div class="content">
+   <p class="word" id="Malign2">179. Malign (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बदनाम करना </p>
+   <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He was trying to malign your reputation.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Counterfeit2">180. Counterfeit (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> नकली </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">this is Counterfeit money don't use it or else you will be in trouble.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Impertinent2">181. Impertinent (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी से इज्जत ना देना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> You are an impertinent young woman. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Brag2">182. Brag (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बढ़ा चढ़ाकर बोलना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He doesn't like to brag.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Adversary2">183. Adversary (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">  विरोधी</p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> you should convience your Adversary to your way of thinking.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Shabby2">184. Shabby (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बहुत बुरा हाल </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> His clothes were old and shabby.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Illicit2">185. Illicit (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> गैर-क़ानूनी  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> They were prosecuted for illicit liquor selling.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Cringe2">186. Cringe (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> घिन का महसूस होना या किसी चीज को देखकर सर्मिन्दा हो जाना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  It makes me cringe when I think how stupid I was.
+  </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Flaw2">187. Flaw (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> खामी </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">there is no flaw in his statement. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Brief2">188. Brief (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">थोड़ा देर के लिए / short  में  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> you answer should be Brief.</p></div>
+</div>
+
+
+
+<div class="content">
+  <p class="word" id="Capture2">189. Capture (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी चीज को पकड़ लेना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">They have not been able to capture the thieve. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Deny2">190. Deny (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> मन कर देना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The government is trying to deny our rights. </p></div>
+</div>
+
+
+
+<div class="content">
+  <p class="word" id="Flesh2">191. Flesh (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सरसो  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">some piece of rooten flesh was lying in the ground. </p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Garlic2">192. Garlic (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">लहसुन  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He is alergic to Garlic. </p></div>
+</div>
+
+
+
+<div class="content">
+  <p class="word" id="Mustard2">193. Mustard (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सरसो  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Mustard is used to extract Mustard oil. </p></div>
+</div>
+
+
+
+
+<div class="content">
+  <p class="word" id="Turmeric2">194. Turmeric (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">हल्दी   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> turmaric has many skin benefits. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Cinnamon2">195. Cinnamon(noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> दाल-चीनी  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Can Cinnamon can reduce blood suger? </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Cumin2">196. Cumin (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जीरा </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Sorry i have not put cumin in the food. </p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Lime2">197. Lime (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">निम्बू
+  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">put some lime juice on my veggies. </p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Chin2">198. Chin (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> ठुड्डी </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">his chin is very small </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Chest2">199. Chest (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">छाती </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He is suffering from chest pain. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Stomach2">200. Stomach (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पेट  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Your Stomach is getting very big you should start wroking out. </p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Knee2">201. Knee (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">घुटना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Iam having knee pain for a long time. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Toe2">202. Toe (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पैर की उंगलिया  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She was dressed from head to toe in red. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Jaw2">203. Jaw (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जबड़ा  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Don't speak disrespectfully with my brother or else i will punch you in your jaw. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Cheek2">204. Cheek (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">गाल
+  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The baby's Cheeks are very soft. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Almond2">205. Almond (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बादाम  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Almond oil is good for hair.  </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Dates2">206. Dates (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">खजूर   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Eating Dates is good for heart. </p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Claw2">207. Claw (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पंजा    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">This animal claws are sharp. </p></div>
+</div>
+
+
+
+
+<div class="content">
+  <p class="word" id="Fare2">208. Fare (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">भाड़ा  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He could barely afford the railway fare.  </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Fair2">209. Fair (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">मेला  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  He was lost in the fair last time. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Shelf2">210. Shelf (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">ताखा  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Put these books on the Shelf. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Effort2">211. Effort (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कोशिश  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She has done a lot of Effort to get the job. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Effect2">212. Effect (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">असर   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">this game has bad Effect on children. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Ancestor2">213. Ancestor (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पूर्वज    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Our Ancestor used to live on forest. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Daring2">214. Daring (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">खतरों से खेलने वाला </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I like Daring journey. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Influence2">215. Influence (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी पर बुरा या अच्छा प्रभाव डालना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">His father has Influence him a lot. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Basking2">216. Basking (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">धुप में आराम से बैठना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">We sat basking in the warm sunshine. </p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Preposterous2">217. Preposterous (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बेतुका /  ऐसा चीज जिस पर विस्वास करना बहुत मुश्किल हो    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The whole idea was preposterous. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Desert2">218. Desert (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">रेगिस्तान  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Nobody likes to live in the desert. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Conceal2">219. Conceal (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">छुपाना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I conceal nothing from you. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Roaming2">220. Roaming (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">इधर उधर भटकना / घूमना    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Tourists love roaming about the old town. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Deplete2">221. Deplete (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">खर्च करना /  ख़त्म करना     </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">If we continue to deplete the Earth's natural resources, we will cause serious damage to the environment. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Wise2">222. Wise (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अकल्मन्द  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> No man is born wise. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Pertain2">223. Pertain (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी ख़ास से सम्बंधित होना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">. His remark did not pertain to the question.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Tantalizing2">224. Tantalizing (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">ललचाने वाला  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> It was the most tantalizing smell.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Bluff2">225. Bluff (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">धोखा / दिखावा / झांसा देना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"It was just a game of bluff.</p></div>
+</div>
+
+
+
+
+<div class="content">
+  <p class="word" id="Counteract2">226. Counteract (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">रोक-थाम करना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Our bodies produce antibodies to counteract disease.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Palliate2">227. Palliate (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कम करना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  medicines only  palliate, they do not cure</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Mitigate2">228. Mitigate (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कम करना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Take this medicine it will Mitigate your pain </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Extenuate2">229. Extenuate (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कम करना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Nothing can extenuate his crime.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Instill2">230. Instill (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">धीरे धीरे करके किसी के मन में कोई बात डालना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">It is easy to instill the minds of young children with fixed ideas.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Raze2">231. Raze (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">तहस नहस कर देना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Fire razed the building to the ground.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Enthusiasm2">232. Enthusiasm (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">उत्साह    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The actors inspired the kids with their enthusiasm.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Manipulate2">233. Manipulate (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज में कोई गड़बड़ी कर देना अपने फायदे के लिए  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She knows how to manipulate the audience.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Impact2">234. Impact (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">असर   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Her speech made a profound impact on everyone.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Humiliate2">235. Humiliate (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अपमानित करना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I didn't want to humiliate her in front of her colleagues.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Conspiracy2">236. Conspiracy (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">साजिस  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He claimed that it was all a conspiracy against him.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Succumb2">237. Succumb (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">हर मान जाना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Don't succumb to the temptation to have just one cigarette. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Atrocity2">238. Atrocity (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बुरा वयवहार </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">But Elizabeth did not profit long by this atrocity.
+
+  </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Naive2">239. Naive (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">ऐसा जिसको ज्यादा जानकारी न हो किसी चीज की  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">he is a naive in this field he does not know much. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Violate2">240. Violate (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी नियम को तोडना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The president's actions violate the constitution. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Scorpion2">241. Scorpion (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बिच्छू  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The scorpion has a sting in its tail. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Swift2">242. Swift (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बहुत तेज   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The local police took swift action against the criminal. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Rapid2">243. Rapid (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बहुत तेज    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">His rise to power was very rapid.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Dawdle2">244. Dawdle (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पीछे छूट जाना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Don't dawdle - we're late already! </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Brutal2">245. Brutal (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बेरहमी  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was the victim of a very brutal murder. </p></div>
+</div>
+
+
+
+<div class="content">
+  <p class="word" id="Credit2">246. Credit (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">भरोसा </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I don't have any credit on you </p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Debit2">247. Debit (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">पैसा निकालना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> You can debit money form atm.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Deposit2">248. Deposit (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जमा करना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He Deposited the money in the bank for future use.</p></div>
+</div>
+
+Cue
+<div class="content">
+  <p class="word" id="Amulet2">249. Amulet (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">तावीज़  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He is wearing a Amulet for luck.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Incense2">250. Incense (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">अगरबत्ती  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Iam allergic to the smell of Incense</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Supper2">251. Supper (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">रात का खाना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I enjoyed the Supper with my friends.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Slumber2">252. Slumber (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">झुपना / सोना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was Slumbering when the lecture was going on.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Cynical2">253. Cynical (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सकाहा   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He is very cynical he doesn't believe anyone.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Sneer2">254. Sneer (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">मुँह चिढ़ाना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was Sneering in front of his father's friends.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Perpetually2">255. Perpetually (ad-verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कोई चीज लगातार होते रहना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">She's perpetually asking me for money.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Incessant2">256. Incessant (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">कोई चीज लगातार होते रहना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The noise of bombs and guns was incessant.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Pervade2">257. Pervade (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">फैलाना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">  Nano technology will soon pervade the world.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Tranquility2">258. Tranquility (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">शांति  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The noise ruptured the tranquility of the afternoon.</p></div>
+</div>
+
+
+
+
+<div class="content">
+  <p class="word" id="Trammel2">259. Trammel (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जाला से पकड़ना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">No longer trammel by his responsibility as chairman, he can say what he wish.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Trample2">260. Trample (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> पैरों तले कुचलना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Don't trample on grass.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Rectify2">261. Rectify (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">सुधारना</p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">You should rectify your error before it is too late.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Extend2">262. Extend (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">बढ़ाना / हद  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The examinations extend over two weeks.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Prevalent2">263. Prevalent (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज का किसी जगह पर आम होना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">These diseases are more prevalent among young children.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Fragment2">264. Fragment (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">टुकड़ा  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I heard only a fragment of their conversation.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Feed2">265. Feed (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">खिलाना     </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Will you feed the dog?</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Withstand2">266. Withstand (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">झेलना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The bacteria can withstand extremes of heat and cold.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Pursuit2">267. Pursuit (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज को पाने के लिए उसका पीछा करना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> He is engaged in the ruthless pursuit of wealth.</p></div>
+</div>
+
+
+
+<div class="content">
+  <p class="word" id="Devoid2">268. Devoid (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज का कमी होना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> A well devoid of water is useless.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Devote2">269. Devote (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">समर्पित कर देना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He decided to devote the rest of his life to science</p></div>
+</div>
+
+
+
+<div class="content">
+  <p class="word" id="Chide2">270. Chide (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">डांटना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The manager chided him for his delay.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Pragmatist2">271. Pragmatist (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">जो इंसान अपनी परेशानियों को समझदारी से हल करता है    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The successful teacher is invariably a pragmatist and a realist.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Departure2">272. Departure (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">किसी चीज का किसी जगह से रवाना होना    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Leave your keys at reception before departure.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Arrive2">273. Arrive (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> पहुँचाना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I'm waiting for James to arrive.</p></div>
+</div>
+
+
+
+
+
+<div class="content">
+  <p class="word" id="Urge2">274. Urge (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> चाहत    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">I felt an uncontrollable urge to scream.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Tenacity2">275. Tenacity (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> कुछ कर दिखने की जिद     </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Tenacity is the bridge to success.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Persistence2">276. Persistence (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> कुछ कर दिखने की जिद  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">My success is based on persistence, not luck.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Determination2">277. Determination (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> कुछ कर दिखने की जिद  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The first element of success is the determination to succeed. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Confer2">278. Confer (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning">प्रदान करना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> If you confer a benefit, never remember it; if you receive one, remember it always. </p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Welfare2">279. Welfare (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> भलाई   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Our only concern is the children's welfare.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Boon2">280. Boon (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> वरदान   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">These machines have proved a real boon to disabled people.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Prestige2">281. Prestige (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> सोहरत </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> The company has gained international prestige.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Peasant2">282. Peasant (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसान  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The president was disguised as a peasant.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Scrub2">283. Scrub (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> मलना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> I started to scrub off the dirt.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Pollute2">284. Pollute (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> गन्दा करना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">These gases pollute the atmosphere of towns and cities.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Discrimination2">285. Discrimination (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> अत्याचार  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Discrimination against women is not allowed.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Petition2">286. Petition (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> विनती-पत्र  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">They collected 10 000 signatures for their petition.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Ordeal2">287. Ordeal (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> कड़ी परीक्षा   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He spoke frankly about the ordeal.</p></div>
+</div>
+
+
+<div class="content">
+  <p class="word" id="Staggering2">288. Staggering (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> चौंका देने वाला </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">The results have been quite staggering.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Purports2">289. Purports (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> दिखाना कुछ और करना कुछ और   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"The document purports to be an official statement.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Queue2">290. Queue (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> क़तार या / लोगो का लाइन   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was standing in Cue for ticket.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Curse2">291. Curse (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> बद्दुआ देना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He cursed the man for betraying him.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Tactics2">292. Tactics (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> दाँव-पेच    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He knows many Tactics to win the match.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Marginalize2">293. Marginalize (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी चीज के असर को काम कर देना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Role of woman in life is always Marginalize</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Alienate2">294. Alienate (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी चीज के असर को काम कर देना   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Role of woman in life is always Alienate</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Defiant2">295. Defiant (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> अकड़  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> Despite the criticisms, she remained defiant.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Affection2">296. Affection (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> प्यार / लगाव   </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He didn't show his wife any affection.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Covetous2">297. Covetous (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी दूसरे को देख कर मन में लालच आना </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">A covetous man is good to none but worse to himself.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Dismal2">298. Dismal (adj)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> उदास </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence"> It was a really dismal day.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Pharmacist2">299. Pharmacist (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> मेडिकल वाला  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He worked awhile as a pharmacist in Cincinnati.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Ginger2">300. Ginger (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> अदरक  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was grinding Ginger in the mixture.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Coriander2">301. Coriander (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> धनिया    </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">Put the Coriander leaf in the fridge.</p></div>
+</div>
+
+<div class="content">
+  <p class="word" id="Nab2">302. Nab (verb)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> किसी को गलत काम करते पकड़ लेना  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">He was Nabed by the police for stealing</p></div>
+</div>
+
+<div class="content">
+ 
+  <p class="word" id="Credited2">303. Credited (noun)</p><span class="dot">:</span><span class="dash">-</span> <p class="meaning"> जमा होना account में  </p>
+  <div class="sentenceExample"><span class="example">ex:-</span><p class="sentence">10000 Rs has been Credited to your bank account.</p></div>
+</div> 
+
+
+
+
+
+
+</div >
+
+<!-- everything will come inside it  -->
+
+    </div>
+
+ <script src="script.js"></script>   
+</body>
+</html>
